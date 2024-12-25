@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface CategoryRepository {
     List<Category> findAll();
-    void addCategory(String name);
+    void createCategory(String name);
     void deleteCategory(int id);
 }

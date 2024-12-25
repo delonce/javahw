@@ -19,7 +19,7 @@ public class CategoryRepositoryJdbcTemplateImpl implements CategoryRepository {
     //language=SQL
     private static final String SQL_DELETE_CATEGORY = "DELETE FROM categories WHERE id = ?";
 
-    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.JdbcTemplate();
+    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.jdbcTemplate();
 
     private static final RowMapper<Category> memberRowMapper = (row, rowNumber) -> {
         int id = row.getInt("id");
@@ -34,7 +34,7 @@ public class CategoryRepositoryJdbcTemplateImpl implements CategoryRepository {
     }
 
     @Override
-    public void addCategory(String name) {
+    public void createCategory(String name) {
         jdbcTemplate.update(SQL_INSERT_CATEGORY, name);
     }
 

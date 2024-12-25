@@ -34,7 +34,7 @@ public class LoanRepositoryJdbcTemplateImpl implements LoanRepository {
     //language=SQL
     private static final String SQL_DELETE_LOAN = "DELETE FROM loans WHERE fk_member_id = ? AND fk_book_id = ?;";
 
-    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.JdbcTemplate();
+    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.jdbcTemplate();
 
     private static final RowMapper<Loan> loanRowMapper = (row, rowNumber) -> {
         int loanId = row.getInt("id");

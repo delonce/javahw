@@ -24,7 +24,7 @@ public class BookRepositoryJdbcTemplateImpl implements BookRepository {
             "JOIN authors a ON b.fk_author_id = a.id " +
             "JOIN categories c ON b.fk_category_id = c.id;";
 
-    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.JdbcTemplate();
+    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.jdbcTemplate();
 
     private static final RowMapper<Book> bookRowMapper = (row, rowNumber) -> {
         int bookId = row.getInt("id");;

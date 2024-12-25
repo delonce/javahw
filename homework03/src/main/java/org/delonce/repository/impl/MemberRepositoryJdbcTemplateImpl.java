@@ -12,7 +12,7 @@ public class MemberRepositoryJdbcTemplateImpl implements MemberRepository {
 
     private static final String SQL_SELECT_ALL = "SELECT * FROM members ORDER BY id";
 
-    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.JdbcTemplate();
+    private final JdbcTemplate jdbcTemplate = JdbcTemplateConfig.jdbcTemplate();
 
     private static final RowMapper<Member> memberRowMapper = (row, rowNumber) -> {
         int memberId = row.getInt("id");

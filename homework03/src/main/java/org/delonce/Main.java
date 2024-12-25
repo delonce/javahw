@@ -36,7 +36,7 @@ public class Main {
         CategoryRepository categoryRepository = new CategoryRepositoryJdbcTemplateImpl();
         System.out.println(categoryRepository.findAll());
 
-        categoryRepository.addCategory("TestCategory");
+        categoryRepository.createCategory("TestCategory");
         System.out.println(categoryRepository.findAll());
 
         Category lastCategory = categoryRepository.findAll().getLast();
