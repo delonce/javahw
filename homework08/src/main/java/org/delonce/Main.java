@@ -17,12 +17,6 @@ public class Main {
     }
 
     private static <T, R> Function<T, R> ternaryOperator(Predicate<Object> condition, Function<? super T, R> ifTrue, Function<? super T, R> ifFalse) {
-        return (s) -> {
-            if (condition.test(s)) {
-                return ifTrue.apply(s);
-            } else {
-                return ifFalse.apply(s);
-            }
-        };
+        return s -> condition.test(s) ? ifTrue.apply(s) : ifFalse.apply(s);
     }
 }
