@@ -1,4 +1,4 @@
-package org.delonce.Figure;
+package org.delonce.figure;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

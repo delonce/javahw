@@ -1,9 +1,9 @@
 package org.delonce;
 
-import org.delonce.Figure.impl.Circle;
-import org.delonce.Figure.impl.Ellipse;
-import org.delonce.Figure.impl.Rectangle;
-import org.delonce.Figure.impl.Square;
+import org.delonce.figure.impl.Circle;
+import org.delonce.figure.impl.Ellipse;
+import org.delonce.figure.impl.Rectangle;
+import org.delonce.figure.impl.Square;
 
 import java.io.BufferedReader;
 import java.io.IOException;

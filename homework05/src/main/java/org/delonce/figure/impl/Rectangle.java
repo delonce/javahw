@@ -1,9 +1,8 @@
-package org.delonce.Figure.impl;
+package org.delonce.figure.impl;
 
-import org.delonce.Figure.AbstractFigure;
+import org.delonce.figure.AbstractFigure;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.List;
 

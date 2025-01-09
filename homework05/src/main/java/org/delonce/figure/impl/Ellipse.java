@@ -1,4 +1,4 @@
-package org.delonce.Figure.impl;
+package org.delonce.figure.impl;
 
 public class Ellipse extends Circle {
     private final double D;

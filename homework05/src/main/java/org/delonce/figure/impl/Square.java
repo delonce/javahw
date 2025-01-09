@@ -1,6 +1,6 @@
-package org.delonce.Figure.impl;
+package org.delonce.figure.impl;
 
-import org.delonce.Movable.Movable;
+import org.delonce.movable.Movable;
 
 import java.util.List;
 
