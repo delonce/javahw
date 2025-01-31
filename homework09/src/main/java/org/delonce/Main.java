@@ -18,23 +18,27 @@ public class Main {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                Arrays.stream(line.split("[^a-zA-ZА-Яа-я0-9]+")).map(String::toLowerCase)
-                        .collect(
-                                Collectors.groupingBy(Function.identity(), Collectors.counting())
-                        )
-                        .entrySet()
-                        .stream()
+                List<String> words = Arrays.stream(line.split("[^a-zA-ZА-Яа-я0-9]+"))
+                        .map(String::toLowerCase)
+                        .collect(Collectors.toList());
+
+                Map<String, Long> wordCounts = words.stream()
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+                Map<Long, List<String>> groupedByCount = wordCounts.entrySet().stream()
                         .collect(Collectors.groupingBy(
                                 Map.Entry::getValue,
                                 Collectors.mapping(Map.Entry::getKey, Collectors.toList())
-                        ))
-                        .entrySet()
-                        .stream()
+                        ));
+
+                List<List<String>> sortedWords = groupedByCount.entrySet().stream()
                         .sorted(Map.Entry.<Long, List<String>>comparingByKey().reversed())
                         .map(Map.Entry::getValue)
-                        .toList()
-                        .stream()
-                        .flatMap(strings -> strings.stream().sorted())
+                        .collect(Collectors.toList());
+
+                sortedWords.stream()
+                        .flatMap(Collection::stream)
+                        .sorted()
                         .limit(10)
                         .forEach(System.out::println);
                 System.out.println();
