@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS grades (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    start_date DATE NOT NULL,
+    is_active BOOLEAN NOT NULL
+);
