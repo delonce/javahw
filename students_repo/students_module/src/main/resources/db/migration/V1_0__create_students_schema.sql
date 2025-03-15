@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS students (
+    id SERIAL NOT NULL PRIMARY KEY,
+    full_name VARCHAR NOT NULL,
+    age INTEGER NOT NULL,
+    email VARCHAR NOT NULL,
+    grades_list INTEGER ARRAY
+);

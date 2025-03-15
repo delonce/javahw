@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS comments (
+    id SERIAL NOT NULL PRIMARY KEY,
+    student_id INTEGER NOT NULL,
+    grade_id INTEGER NOT NULL,
+    text VARCHAR NOT NULL
+);
