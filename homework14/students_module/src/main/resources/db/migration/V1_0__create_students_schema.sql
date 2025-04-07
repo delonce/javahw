@@ -1,0 +1,11 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+CREATE TABLE IF NOT EXISTS students (
+    id SERIAL NOT NULL PRIMARY KEY,
+    full_name VARCHAR NOT NULL,
+    age INTEGER NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    password VARCHAR NOT NULL,
+    roles VARCHAR ARRAY,
+    grades_list INTEGER ARRAY
+);

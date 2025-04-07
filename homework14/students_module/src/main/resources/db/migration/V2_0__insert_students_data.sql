@@ -1,0 +1,4 @@
+INSERT INTO students VALUES (default, 'Овчинникова Вероника Максимовна', 19, 'kufibuj-efe70@yandex.ru', crypt('Rqi2xg', gen_salt('bf')), ARRAY['USER', 'ADMIN'], ARRAY[2]),
+                            (default, 'Наумова Анна Артёмовна', 42, 'vewad_ewicu45@hotmail.com', crypt('f4XXAM', gen_salt('bf')), ARRAY['USER'], ARRAY[1, 4]),
+                            (default, 'Львов Константин Павлович', 37, 'lotizaj-ige60@yandex.ru', crypt('Pxai9X', gen_salt('bf')), ARRAY['USER'], ARRAY[5]),
+                            (default, 'Козлов Александр Савельевич', 28, 'yomano_wavo78@gmail.com', crypt('0F9xig', gen_salt('bf')), ARRAY['USER'], ARRAY[1, 3]);

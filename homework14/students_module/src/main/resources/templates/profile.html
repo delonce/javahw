@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UNO - Game: Rooms</title>
+
+    <script th:inline="javascript" src="" th:src="@{/js/profile.js}"></script>
+    <link rel="stylesheet" href="" th:href="@{/styles/profile.css}">
+</head>
+<body>
+<header>
+    <h1 id="name_folder">Default name</h1>
+    <h2 id="email_folder">Default email</h2>
+</header>
+
+<main>
+    <section class="grades-list">
+        <h2>Grades</h2>
+
+        <div id="grades">
+
+            <div class="grade">
+                <div class="content">
+                    <label>
+                        <input
+                                type="text"
+                                class="text"
+                                value="Default name"
+                                readonly
+                        />
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <input
+                            type="text"
+                            class="text"
+                            value="Default date"
+                            readonly
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
