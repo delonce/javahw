@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Логин</title>
+    <style>
+        /* Пример стилей, интегрированных из /css/style.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #218838;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Войти в систему</h1>
+    <form>
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="button" onclick="login()">Войти</button>
+        </div>
+        <!-- Блок для отображения сообщения об ошибке -->
+        <div class="error-message" id="message">
+            <!-- Здесь можно вывести сообщение об ошибке, если передан параметр error -->
+        </div>
+    </form>
+</div>
+
+<script>
+    function login(){
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        fetch("/api/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"  // Добавляем Accept-заголовок
+          },
+          body: JSON.stringify({username, password})
+        })
+        .then(response => {
+          if(response.ok) return response.text();
+          else throw new Error("Неверные учётные данные");
+        })
+        .then(data => {
+            localStorage.setItem("jwtToken", data);
+            goToTasks(data);
+        })
+        .catch(err => {
+          document.getElementById("message").innerText = err.message;
+          console.error("Что - то не так!");
+        });
+    }
+
+    function goToTasks(token) {
+        const date = new Date();
+        date.setTime(date.getTime() + 3000);
+
+        document.cookie = 'jwtToken=' + token + '; expires=' + date.toUTCString() + '; path=/';
+        window.location.href = '/tasks';
+    }
+</script>
+</body>
+</html>
