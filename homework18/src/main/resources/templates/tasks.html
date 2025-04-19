@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UNO - Game: Rooms</title>
+
+    <script th:inline="javascript" src="" th:src="@{/js/tasks.js}"></script>
+    <link rel="stylesheet" href="" th:href="@{/styles/tasks.css}">
+</head>
+<body>
+<header>
+    <h1 id="name_folder">Default name</h1>
+    <h2 id="role_folder">Anonymous</h2>
+    <form id="new_task_form">
+        <input
+                type="text"
+                name="name_input"
+                id="name_input"
+                placeholder="Task name?" />
+        <input
+                type="text"
+                name="description_input"
+                id="description_input"
+                placeholder="Description?" />
+        <input
+                type="button"
+                id="add_task"
+                value="Add task" />
+    </form>
+</header>
+
+<main>
+    <section class="tasks-list">
+        <h2>Tasks</h2>
+
+        <div id="tasks">
+
+            <div class="task">
+                <div class="content">
+                    <label>
+                        <input
+                                type="text"
+                                class="text"
+                                value="Name"
+                                readonly
+                        />
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <input
+                            type="text"
+                            class="text"
+                            value="Description"
+                            readonly
+                    />
+                    <button class="delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="button_folder">
+        <form action="/perform_logout" method="post">
+            <button type="submit" id="leave_button" class="leave_button">Logout</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
