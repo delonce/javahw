@@ -1,0 +1,5 @@
+FROM openjdk:23
+COPY target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
+ARG SPRING_PROFILES_ACTIVE
+ENV SPRING_PROFILES_ACTIVE=$SPRING_PROFILES_ACTIVE

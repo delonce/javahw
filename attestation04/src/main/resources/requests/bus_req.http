@@ -1,0 +1,313 @@
+GET http://localhost:9999/api/v1/buses
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRpbHNhRTlrZGxWYnBONWZBL24uWHRPN0tQLk82bGxxZFRHcm1YankzamNCblBHald6NjRQeSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2Njc4MzEsImV4cCI6MTc0NTgxMTgzMX0.0Zmdq-6TiLGL4KOlkcrcO96LSXp75aoyyfCCbCIrDVF32wPMfoYnHpqG7obt9wBLHfipI8U6E4oBvVFYph3j2A
+
+    Response Body:
+        [
+            {
+                "number": "54837291045628374651",
+                "path": {
+                    "number": "м3",
+                    "beginStation": {
+                        "name": "Серебряный бор",
+                        "district": "Строгино"
+                    },
+                    "endStation": {
+                        "name": "Проспект Буденного",
+                        "district": "Соколиная гора"
+                    },
+                    "stations": [
+                        {
+                            "name": "Серебряный бор",
+                            "district": "Строгино"
+                        },
+                        {
+                            "name": "Проспект Буденного",
+                            "district": "Соколиная гора"
+                        },
+                        {
+                            "name": "2-я Черногрязская улица",
+                            "district": "Пресненский"
+                        },
+                        {
+                            "name": "Скарятинский переулок",
+                            "district": "Патриаршие пруды"
+                        }
+                    ],
+                    "duration": 5400000
+                },
+                "department": {
+                    "name": "Департамент №2",
+                    "address": "Москва, Красногвардейский проезд, 21"
+                },
+                "drivers": [
+                    {
+                        "name": "Никитников Ринат",
+                        "age": 41,
+                        "phone": "+7 (915) 264-85-93"
+                    },
+                    {
+                        "name": "Хусид Глеб",
+                        "age": 36,
+                        "phone": "+7 (925) 731-49-06"
+                    }
+                ],
+                "seatsNumber": 36,
+                "type": null,
+                "isActive": true
+            },
+            {
+                "number": "69012384572301985624",
+                "path": {
+                    "number": "265",
+                    "beginStation": {
+                        "name": "Метро Бульвар Рокоссовского",
+                        "district": "Богородское"
+                    },
+                    "endStation": {
+                        "name": "Рижский вокзал",
+                        "district": "Марьина роща"
+                    },
+                    "stations": [
+                        {
+                            "name": "Метро Бульвар Рокоссовского",
+                            "district": "Богородское"
+                        },
+                        {
+                            "name": "Рижский вокзал",
+                            "district": "Марьина роща"
+                        },
+                        {
+                            "name": "Мосгорсуд",
+                            "district": "Преображенское"
+                        },
+                        {
+                            "name": "Метро Сокольники",
+                            "district": "Сокольники"
+                        }
+                    ],
+                    "duration": 2400000
+                },
+                "department": {
+                    "name": "Департамент №1",
+                    "address": "Москва, ул. Садовая, 1"
+                },
+                "drivers": [
+                    {
+                        "name": "Зарубин Тимофей",
+                        "age": 53,
+                        "phone": "+7 (916) 408-27-15"
+                    },
+                    {
+                        "name": "Гилев Юрий",
+                        "age": 29,
+                        "phone": "+7 (903) 156-84-72"
+                    }
+                ],
+                "seatsNumber": 28,
+                "type": null,
+                "isActive": true
+            },
+            {
+                "number": "31247586903214567890",
+                "path": {
+                    "number": "с799",
+                    "beginStation": {
+                        "name": "138-й квартал Выхина",
+                        "district": "Выхино-Жулебино"
+                    },
+                    "endStation": {
+                        "name": "Серпуховский Вал",
+                        "district": "Донской"
+                    },
+                    "stations": [
+                        {
+                            "name": "138-й квартал Выхина",
+                            "district": "Выхино-Жулебино"
+                        },
+                        {
+                            "name": "Серпуховский Вал",
+                            "district": "Донской"
+                        },
+                        {
+                            "name": "Префектура ЮАО",
+                            "district": "Южнопортовый"
+                        },
+                        {
+                            "name": "Метро Кузьминки",
+                            "district": "Кузьминки"
+                        }
+                    ],
+                    "duration": 3600000
+                },
+                "department": {
+                    "name": "Департамент №1",
+                    "address": "Москва, ул. Садовая, 1"
+                },
+                "drivers": [
+                    {
+                        "name": "Волков Артем",
+                        "age": 28,
+                        "phone": "+7 (977) 342-91-58"
+                    },
+                    {
+                        "name": "Белов Анатолий",
+                        "age": 34,
+                        "phone": "+7 (999) 675-23-40"
+                    }
+                ],
+                "seatsNumber": 30,
+                "type": null,
+                "isActive": true
+            }
+        ]
+
+
+
+POST http://localhost:9999/api/v1/buses
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "number": "83482482273183",
+            "path": "265",
+            "department": 2,
+            "drivers": [1, 3],
+            "seatsNumber": 33,
+            "type": "бензин",
+            "isActive": true
+        }
+
+    Response Body:
+        {
+            "number": "83482482273183",
+            "path": {
+                "number": "265",
+                "beginStation": {
+                    "name": "Метро Бульвар Рокоссовского",
+                    "district": "Богородское"
+                },
+                "endStation": {
+                    "name": "Рижский вокзал",
+                    "district": "Марьина роща"
+                },
+                "stations": [
+                    {
+                        "name": "Метро Бульвар Рокоссовского",
+                        "district": "Богородское"
+                    },
+                    {
+                        "name": "Рижский вокзал",
+                        "district": "Марьина роща"
+                    },
+                    {
+                        "name": "Мосгорсуд",
+                        "district": "Преображенское"
+                    },
+                    {
+                        "name": "Метро Сокольники",
+                        "district": "Сокольники"
+                    }
+                ],
+                "duration": 2400000
+            },
+            "department": {
+                "name": "Департамент №2",
+                "address": "Москва, Красногвардейский проезд, 21"
+            },
+            "drivers": [
+                {
+                    "name": "Никитников Ринат",
+                    "age": 41,
+                    "phone": "+7 (915) 264-85-93"
+                },
+                {
+                    "name": "Зарубин Тимофей",
+                    "age": 53,
+                    "phone": "+7 (916) 408-27-15"
+                }
+            ],
+            "seatsNumber": 33,
+            "type": null,
+            "isActive": true
+        }
+
+
+
+PUT http://localhost:9999/api/v1/buses
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "number": "83482482273183",
+            "path": "с799"
+        }
+
+    Response Body:
+        {
+            "number": "83482482273183",
+            "path": {
+                "number": "с799",
+                "beginStation": {
+                    "name": "138-й квартал Выхина",
+                    "district": "Выхино-Жулебино"
+                },
+                "endStation": {
+                    "name": "Серпуховский Вал",
+                    "district": "Донской"
+                },
+                "stations": [
+                    {
+                        "name": "138-й квартал Выхина",
+                        "district": "Выхино-Жулебино"
+                    },
+                    {
+                        "name": "Серпуховский Вал",
+                        "district": "Донской"
+                    },
+                    {
+                        "name": "Префектура ЮАО",
+                        "district": "Южнопортовый"
+                    },
+                    {
+                        "name": "Метро Кузьминки",
+                        "district": "Кузьминки"
+                    }
+                ],
+                "duration": 3600000
+            },
+            "department": {
+                "name": "Департамент №2",
+                "address": "Москва, Красногвардейский проезд, 21"
+            },
+            "drivers": [
+                {
+                    "name": "Никитников Ринат",
+                    "age": 41,
+                    "phone": "+7 (915) 264-85-93"
+                },
+                {
+                    "name": "Зарубин Тимофей",
+                    "age": 53,
+                    "phone": "+7 (916) 408-27-15"
+                }
+            ],
+            "seatsNumber": 33,
+            "type": null,
+            "isActive": true
+        }
+
+
+
+DELETE http://localhost:9999/api/v1/buses
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        83482482273183
