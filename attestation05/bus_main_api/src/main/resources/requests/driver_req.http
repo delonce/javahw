@@ -1,0 +1,95 @@
+GET http://localhost:9999/api/v1/drivers
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Response Body:
+        [
+            {
+                "name": "Никитников Ринат",
+                "age": 41,
+                "phone": "+7 (915) 264-85-93"
+            },
+            {
+                "name": "Хусид Глеб",
+                "age": 36,
+                "phone": "+7 (925) 731-49-06"
+            },
+            {
+                "name": "Зарубин Тимофей",
+                "age": 53,
+                "phone": "+7 (916) 408-27-15"
+            },
+            {
+                "name": "Гилев Юрий",
+                "age": 29,
+                "phone": "+7 (903) 156-84-72"
+            },
+            {
+                "name": "Волков Артем",
+                "age": 28,
+                "phone": "+7 (977) 342-91-58"
+            },
+            {
+                "name": "Белов Анатолий",
+                "age": 34,
+                "phone": "+7 (999) 675-23-40"
+            },
+            {
+                "name": "Сухарев Игорь",
+                "age": 37,
+                "phone": "+7 (495) 782-61-34"
+            },
+            {
+                "name": "Николаевский Павел",
+                "age": 29,
+                "phone": "+7 (985) 219-47-63"
+            }
+        ]
+
+
+
+POST http://localhost:9999/api/v1/drivers
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_driver_name",
+            "age": 28,
+            "phone": "test_phone"
+        }
+
+    Response Body:
+        {
+            "name": "test_driver_name",
+            "age": 28,
+            "phone": "test_phone"
+        }
+
+
+
+PUT http://localhost:9999/api/v1/drivers/9
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_update_name"
+        }
+
+    Response Body:
+        {
+            "name": "test_update_name",
+            "age": 28,
+            "phone": "test_phone"
+        }
+
+
+
+DELETE http://localhost:9999/api/v1/drivers/9
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg

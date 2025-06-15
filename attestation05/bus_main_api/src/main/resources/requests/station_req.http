@@ -1,0 +1,116 @@
+GET http://localhost:9999/api/v1/stations
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Response Body:
+        [
+            {
+                "name": "Серебряный бор",
+                "district": "Строгино"
+            },
+            {
+                "name": "Проспект Буденного",
+                "district": "Соколиная гора"
+            },
+            {
+                "name": "2-я Черногрязская улица",
+                "district": "Пресненский"
+            },
+            {
+                "name": "Скарятинский переулок",
+                "district": "Патриаршие пруды"
+            },
+            {
+                "name": "Метро Бульвар Рокоссовского",
+                "district": "Богородское"
+            },
+            {
+                "name": "Рижский вокзал",
+                "district": "Марьина роща"
+            },
+            {
+                "name": "Мосгорсуд",
+                "district": "Преображенское"
+            },
+            {
+                "name": "Метро Сокольники",
+                "district": "Сокольники"
+            },
+            {
+                "name": "138-й квартал Выхина",
+                "district": "Выхино-Жулебино"
+            },
+            {
+                "name": "Серпуховский Вал",
+                "district": "Донской"
+            },
+            {
+                "name": "Префектура ЮАО",
+                "district": "Южнопортовый"
+            },
+            {
+                "name": "Метро Кузьминки",
+                "district": "Кузьминки"
+            },
+            {
+                "name": "Прибрежный проезд",
+                "district": "Левобережный"
+            },
+            {
+                "name": "Карамышевская набережная",
+                "district": "Хорошево-Мневники"
+            },
+            {
+                "name": "Улица Мнёвники, 4",
+                "district": "Хорошево-Мневники"
+            },
+            {
+                "name": "Гидропроект",
+                "district": "Сокол"
+            }
+        ]
+
+
+
+POST http://localhost:9999/api/v1/stations
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_name",
+            "district": "test_district"
+        }
+
+    Response Body:
+        {
+            "name": "test_name",
+            "district": "test_district"
+        }
+
+
+
+PUT http://localhost:9999/api/v1/stations/17
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_update_name"
+        }
+
+    Response Body:
+        {
+            "name": "test_update_name",
+            "district": "test_district"
+        }
+
+
+
+DELETE http://localhost:9999/api/v1/stations/17
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
