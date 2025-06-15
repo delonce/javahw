@@ -1,0 +1,60 @@
+GET http://localhost:9999/api/v1/departments
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Response Body:
+        [
+            {
+                "name": "Департамент №1",
+                "address": "Москва, ул. Садовая, 1"
+            },
+            {
+                "name": "Департамент №2",
+                "address": "Москва, Красногвардейский проезд, 21"
+            }
+        ]
+
+
+
+POST http://localhost:9999/api/v1/departments
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_dep_name",
+            "address": "test_dep_address"
+        }
+
+    Response Body:
+        {
+            "name": "test_dep_name",
+            "address": "test_dep_address"
+        }
+
+
+
+PUT http://localhost:9999/api/v1/departments/4
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "name": "test_update_name"
+        }
+
+    Response Body:
+        {
+            "name": "test_update_name",
+            "address": "test_dep_address"
+        }
+
+
+
+DELETE http://localhost:9999/api/v1/departments/4
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg

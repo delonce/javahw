@@ -1,0 +1,193 @@
+GET http://localhost:9999/api/v1/paths
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Response Body:
+        [
+            {
+                "number": "м3",
+                "beginStation": {
+                    "name": "Серебряный бор",
+                    "district": "Строгино"
+                },
+                "endStation": {
+                    "name": "Проспект Буденного",
+                    "district": "Соколиная гора"
+                },
+                "stations": [
+                    {
+                        "name": "Серебряный бор",
+                        "district": "Строгино"
+                    },
+                    {
+                        "name": "Проспект Буденного",
+                        "district": "Соколиная гора"
+                    },
+                    {
+                        "name": "2-я Черногрязская улица",
+                        "district": "Пресненский"
+                    },
+                    {
+                        "name": "Скарятинский переулок",
+                        "district": "Патриаршие пруды"
+                    }
+                ],
+                "duration": 5400000
+            },
+            {
+                "number": "265",
+                "beginStation": {
+                    "name": "Метро Бульвар Рокоссовского",
+                    "district": "Богородское"
+                },
+                "endStation": {
+                    "name": "Рижский вокзал",
+                    "district": "Марьина роща"
+                },
+                "stations": [
+                    {
+                        "name": "Метро Бульвар Рокоссовского",
+                        "district": "Богородское"
+                    },
+                    {
+                        "name": "Рижский вокзал",
+                        "district": "Марьина роща"
+                    },
+                    {
+                        "name": "Мосгорсуд",
+                        "district": "Преображенское"
+                    },
+                    {
+                        "name": "Метро Сокольники",
+                        "district": "Сокольники"
+                    }
+                ],
+                "duration": 2400000
+            },
+            {
+                "number": "с799",
+                "beginStation": {
+                    "name": "138-й квартал Выхина",
+                    "district": "Выхино-Жулебино"
+                },
+                "endStation": {
+                    "name": "Серпуховский Вал",
+                    "district": "Донской"
+                },
+                "stations": [
+                    {
+                        "name": "138-й квартал Выхина",
+                        "district": "Выхино-Жулебино"
+                    },
+                    {
+                        "name": "Серпуховский Вал",
+                        "district": "Донской"
+                    },
+                    {
+                        "name": "Префектура ЮАО",
+                        "district": "Южнопортовый"
+                    },
+                    {
+                        "name": "Метро Кузьминки",
+                        "district": "Кузьминки"
+                    }
+                ],
+                "duration": 3600000
+            }
+        ]
+
+
+
+POST http://localhost:9999/api/v1/paths
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "number": "8483",
+            "beginStation": 1,
+            "endStation": 2,
+            "stations": [1, 3, 2],
+            "timesFromStartToStations": [17318, 82911, 839220],
+            "duration": 839220
+        }
+
+    Response Body:
+        {
+            "number": "8483",
+            "beginStation": {
+                "name": "Серебряный бор",
+                "district": "Строгино"
+            },
+            "endStation": {
+                "name": "Проспект Буденного",
+                "district": "Соколиная гора"
+            },
+            "stations": [
+                {
+                    "name": "Серебряный бор",
+                    "district": "Строгино"
+                },
+                {
+                    "name": "2-я Черногрязская улица",
+                    "district": "Пресненский"
+                },
+                {
+                    "name": "Проспект Буденного",
+                    "district": "Соколиная гора"
+                }
+            ],
+            "duration": 839220
+        }
+
+
+
+PUT http://localhost:9999/api/v1/paths
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        {
+            "number": "8483",
+            "duration": 3828991
+        }
+
+    Response Body:
+        {
+            "number": "8483",
+            "beginStation": {
+                "name": "Серебряный бор",
+                "district": "Строгино"
+            },
+            "endStation": {
+                "name": "Проспект Буденного",
+                "district": "Соколиная гора"
+            },
+            "stations": [
+                {
+                    "name": "Серебряный бор",
+                    "district": "Строгино"
+                },
+                {
+                    "name": "2-я Черногрязская улица",
+                    "district": "Пресненский"
+                },
+                {
+                    "name": "Проспект Буденного",
+                    "district": "Соколиная гора"
+                }
+            ],
+            "duration": 3828991
+        }
+
+
+
+DELETE http://localhost:9999/api/v1/paths
+
+    Request Headers:
+        Cookie: jwtToken=eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRMdlVIZXNsNGExeEdBN2s5cEJNM0plNGthQzFvM1R1ZmxNZWIzN1pqcGp3bGRWVWVrWnUwMiIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2NjkyMjUsImV4cCI6MTc0NTgxMzIyNX0.uDZyQrccFigYYaRSgG4Cr1DNfZ30VQ8ZQK89oGQg_KYeBc6wihcE9UjZYFcQCN12Ce6jDm7tJp7uVu6iLH3Wvg
+
+    Request Body:
+        8483

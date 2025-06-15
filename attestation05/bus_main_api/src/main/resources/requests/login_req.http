@@ -1,0 +1,10 @@
+POST http://localhost:9999/api/v1/login
+
+    Request Body:
+        {
+            "username": "*",
+            "password": "*"
+        }
+
+    Response Body:
+        eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IiQyYSQwNiRpbHNhRTlrZGxWYnBONWZBL24uWHRPN0tQLk82bGxxZFRHcm1YankzamNCblBHald6NjRQeSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sInVzZXJuYW1lIjoiYWRtaW5fMSIsInN1YiI6ImFkbWluXzEiLCJpYXQiOjE3NDU2Njc4MzEsImV4cCI6MTc0NTgxMTgzMX0.0Zmdq-6TiLGL4KOlkcrcO96LSXp75aoyyfCCbCIrDVF32wPMfoYnHpqG7obt9wBLHfipI8U6E4oBvVFYph3j2A
